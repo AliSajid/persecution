@@ -1,7 +1,7 @@
 # Script Outline
 
 This document contains the situations I want to create, regardless
-of the actual wordings.
+of the actual wordings given.
 
 ## Opening
 
