@@ -1,11 +1,11 @@
 situation:
   name: First room
-  description: Welcome to the game. 
-This is the first step in your experience of the life of a modern-day Pakistani individual.  Please select one of the following characters. Choose wisely - your fate as a character depends on your selection. 
+  description: All life begins and all life ends. and people are nothing but data points in a statistical table, when it comes to your usual newspapers and analysts. What they don't realize is that behind each of those datapoints is a man, a woman or a child, with their own hopes, dreams and aspirations. With a family and a story to tell. That is what Poets and story-tellers see. But even they miss the point. They go too far from reality. So far, that the story becomes a shadow, with empty names, and intangible hopes and dreams. But that is not what is happening today. Because this is your story. And this is your life. You definitely have a name, and you are not a figment of some crazy alcoholic's imagination. You are definitely real. And you are waking up today to a brand new day. But a single question still remains: WHO ARE YOU?
 
   choices:
-    Mohammad Yaqoob, 45, Multan; Second room
-	Haider Mirza, 28, Quetta; Second room
-	Hannah Masih, 18, Karachi; Second room
-	Avinash Khatri, 48, Hyderabad; Second room
-	Salim Ahmad, 33, Lahore; Second room
+    Who are you?; Options; Look at;
+    Mohammad Yaqoob, 45, Multan; Second room; Go to;
+    Haider Ali Jafri, 28, Quetta; Second room; Go to;
+    Hannah Masih, 18, Karachi; Second room; Go to;
+    Avinash Khatri, 48, Hyderabad; Second room; Go to;
+    Mirza Salim Ahmad, 33, Lahore; Second room; Go to;
