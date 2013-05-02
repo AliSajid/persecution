@@ -1,7 +1,18 @@
 situation:
-  name: First room
-  description: This is your first room. The first situation your character has to encounter. Say, for example, this is the place where the character chooses a name.
-  choices:
-    name-of-choice-1: What part of text it is connected to; Which other situation, if any, it leads to. (Use the name from the name: attribute)
+  name: Second room
+  description: *darkened room, lit only by the light blazing from a television set. The news is on, and there is a serious-looking reporter on the screen*
+  
+  Today's Headlines : In another atrocious act of terrorism, two bombs were exploded in the locality of A-town in Karachi today. The bombs were exploded in succession, with 40 dead and close to 200 injured. Police suspect that this is a sectarian bombing since the area is inhabited predominently with families of the Shia persuasion. 
+
+In other news, the president of the country was unable to comment on the situation since he was abroad, attending a conference in France. 
+
+The government has called for a nationwide strike in response to these attacks, and businesses will be closed tomorrow. In a country affected by rising prices and already failing economy, this will be yet another blow to the common man. 
+
+Power shortages continue in the whole country. 
+
+In a statement by the local police chief, the suspects involved in the burning of christian locality in Lahore have still not been apprehended. 
+
+
+    Continue; Third room
       
 
