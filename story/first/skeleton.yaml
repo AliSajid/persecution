@@ -1,7 +1,0 @@
-situation:
-  name: First room
-  description: This is your first room. The first situation your character has to encounter. Say, for example, this is the place where the character chooses a name.
-  choices:
-    name-of-choice-1: What part of text it is connected to; Which other situation, if any, it leads to. (Use the name from the name: attribute)
-      
-
