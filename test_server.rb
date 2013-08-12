@@ -15,4 +15,4 @@ def start_webrick(config={})
   server.start
 end
 
-start_webrick(:DocumentRoot => '../games')
+start_webrick(:DocumentRoot => '.')
