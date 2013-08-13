@@ -40,16 +40,21 @@ undum.game.situations.start4 = new undum.Situation({
         system.write( vorple.html.p("You have had the misfortune to be born here. You were born here under circumstance that made you susceptible to your current situation. You see, you are dead now. And it's really your fault. Yes. Really. You were born in the wrong family. You had the wrong name. You had the wrong upbringing and thus you adeserved what happened to you. Your mind wanders off, trying to remember stuff that happened in another life time. It's hard. You can barely make out your own name.") +
                 vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("ahmedi2", "Muhammad Ahmed")) +
-                                vorple.html.tag("li", vorple.html.link("shia1", "Syed Ali Zaidi")) +
-                                vorple.html.tag("li",vorple.html.link("christian1", "Sarah Masih")) +
-                                vorple.html.tag("li",vorple.html.link("hindu1", "Placeholder")),
+                                vorple.html.tag("li", vorple.html.link("shiaplaceholder", "Syed Ali Zaidi")) +
+                                vorple.html.tag("li",vorple.html.link("christianplaceholder", "Sarah Masih")) +
+                                vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Placeholder")),
                                 {classes: "options"}));
-    }
+    },
+    exit: function(character, system, to) {
+                system.setCharacterText(
+                    vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
+                );
+            }
 });
 
 // Ahmedi Storyline
 
-undum.game.situations.ahmedi1 = new undum.SimpleSituation( vorple.html.p("You turn off the TV and sit in the darkened room.  Your parents in the other room are asleep, but the news report has driven all idea of sleep from your mind.") + vorple.html.p( vorple.html.link( "ahmedi2", "You decide to turn in." )));
+undum.game.situations.ahmedi1 = new undum.SimpleSituation( vorple.html.p("You turn off the News and sit in the darkened room.  Your parents in the other room are asleep, but the news report has driven all idea of sleep from your mind.") + vorple.html.p( vorple.html.link( "ahmedi2", "You decide to turn in." )));
 
 undum.game.situations.ahmedi2 = new undum.SimpleSituation( 
 vorple.html.p("You couldn't really sleep...") + 
@@ -67,7 +72,7 @@ vorple.html.p("The text stares at you, waiting for a reply...") +
                         vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("./reply", "Reply")) +
                                 vorple.html.tag("li",vorple.html.link("./notreply", "Don't Reply")),
-                                {classes: "options"}),
+                                {classes: "transient options"}),
 {
         actions: {
             reply: vorple.html.p("You decide to reply. Kashifa had been a good friend and you had liked her from the beginning. It would be good to catch up again." + vorple.html.link("ahmedi4", "You decide to meet up for lunch.") + vorple.html.p("You head out to work, giving your little sister and brother a hug on the way out. they are getting ready for university and college respectively.")),
@@ -85,29 +90,30 @@ vorple.html.p("You are stuck in a very difficult position..") +
                         vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("./accept", "You nod.")) +
                                 vorple.html.tag("li",vorple.html.link("./deny1", "You shake your head in denial.")),
-                                {classes: "options"}),
+                                {classes: "options transient"}),
 {
         actions: {
             accept: vorple.html.p("You nod, fearfully, wondering what would happen now." + vorple.html.p("The man's face becomes a mask of rage. He yanks back the medicine from your outreaching hands, and spits " + vorple.html.quote("Get out! We don't serve your kind in here.") +
                                     vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("./retaliate", "You decide to fight back.")) +
                                 vorple.html.tag("li",vorple.html.link("./noretaliate", "You decide to head back. You don't want any more trouble.")),
-                                {classes: "options"}))),
+                                {classes: "options transient"}))),
             deny1: vorple.html.p("You deny the allegtion. The shopkeeper points at your name. " + vorple.html.quote("Your name. You are clearly Qadiani. Admit it.")) +
                                 vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("./accept", "You nod, hurt.")) +
                                 vorple.html.tag("li",vorple.html.link("./deny2", "You keep denying...")),
-                                {classes: "options"}),
+                                {classes: "options transient"}),
             deny2: vorple.html.p("You still deny the allegation, despite it being true. The fear of reatliation, the combined hatred of the people against you forcing you to lie about who you are. " + vorple.html.link("./accept", "The menacing look in the shopkeeper's eyes forces you to admit the truth")),
-            retaliate: vorple.html.p("<p>stuff</p>"),
-            noretaliate: vorple.html.p("<p>stuff</p>")
+            retaliate: vorple.html.p("You try to argue with the shopkeeper, telling him how you need the medicine, but the man won't even let you talk. A few other people gather to see the commontion. The man shouts " + vorple.html.quote("Qadiani Kutta!") + " and the people jump on you." + vorple.html.link("ahmedi5", "You barely manage to get away to your car...")),
+            noretaliate: vorple.html.p(vorple.html.link("ahmedi5", "You become silent and leave. This wasn't something you were unaccustomed to. This wasn't the first time this happened and you were sure this wouldn't be the last time."))
                 }
 });
 
-undum.game.situations.ahmedi5 = new undum.SimpleSituation( vorple.html.p("News about an Ahmadi mosque being ransacked, the Imam arrested, congregation beaten.  it was the mosque in your neighbourhood, and if you hadn't decided to work late that day you would have been part of the congregation.  You are scared now, especially since more and more people were turning a cold shoulder to you at work, and there were rumours of a complaint going around about you. Even your fiance is distant these days, part out of fear and part out of ") +
-vorple.html.p("Things seem to go from bad to worse." ));
+undum.game.situations.ahmedi5 = new undum.SimpleSituation( vorple.html.p("There is news about an Ahmadi mosque being ransacked, the Imam arrested and the congregation beaten.  It was the mosque in your neighbourhood, and if you hadn't decided to work late that day you would have been part of the congregation.  You are scared now, especially since more and more people were turning a cold shoulder to you at work, and there were rumours of a complaint going around about you. Even your fiance is distant these days, part out of fear and part out of ") +
+vorple.html.p(vorple.html.link("ahmedi6", "Things seem to have gone from bad to worse." )));
 
-undum.game.situations.ahmedi6 = new undum.SimpleSituation(vorple.html.p("You get fired from the job, on a false charge of 'spreading propaganda' in your classes, although to the best of your knowledge the only thing you've taught up til now has been theoretical physics.") +
+undum.game.situations.ahmedi6 = new undum.SimpleSituation(vorple.html.tag("h3", "A few weeks later") +
+vorple.html.p("You get fired from the job, on a false charge of 'spreading propaganda' in your classes, although to the best of your knowledge the only thing you've taught up til now has been theoretical physics.") +
 
 vorple.html.p("You go home to find your worried parents telling you Kashifa has broken off the engagement.") +
 
@@ -115,11 +121,12 @@ vorple.html.p("Police arrive in the evening, to 'investigate' the charges. Your 
 
 vorple.html.p("You can barely stand to see yourself in the mirror. With no money, there is no chance of even escaping abroad again. And what about your parents? Your brother and sister? there was no escape even for them. There was no escape anywhere.") +
 
-vorple.html.p("In a fog of depression, you decide to end it all."));
+vorple.html.p(vorple.html.link("epilogue1", "In a fog of depression, you decide to end it all.")));
 
 undum.game.situations.ahmedi7 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
 // Hindu Storyline
+undum.game.situations.hinduplaceholder = new undum.SimpleSituation( vorple.html.p("Coming soon, in Episode 4"));
 
 undum.game.situations.hindu1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
@@ -137,6 +144,7 @@ undum.game.situations.hindu7 = new undum.SimpleSituation( "<p>Hello world!</p>" 
 
 
 // Christian Storyline
+undum.game.situations.christianplaceholder = new undum.SimpleSituation( vorple.html.p("Coming soon, in Episode 3"));
 
 undum.game.situations.christian1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
@@ -153,6 +161,7 @@ undum.game.situations.christian6 = new undum.SimpleSituation( "<p>Hello world!</
 undum.game.situations.christian7 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
 // Shia Storyline
+undum.game.situations.shiaplaceholder = new undum.SimpleSituation( vorple.html.p("Coming soon, in Episode 2"));
 
 undum.game.situations.shia1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
@@ -171,11 +180,19 @@ undum.game.situations.shia7 = new undum.SimpleSituation( "<p>Hello world!</p>" )
 
 // Epilogue
 
-undum.game.situations.epilogue1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.epilogue1 = new undum.SimpleSituation(vorple.html.p("This death really isn't the death of a person. It is the death of the whole nation. When violence and hatred becom our partners, nothing can save us from the ultimate destuction. It will chip away a us, until every majority will suffer the fate of these minorities." + vorple.html.p(vorple.html.link("epilogue2", "We must save the people, to ensure our survival"))));
 
-undum.game.situations.epilogue2 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.epilogue2 = new undum.SimpleSituation(vorple.html.tag("h2", vorple.html.tag("strong", vorple.html.link("credits", "The End"))));
 
-undum.game.situations.epilogue3 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.credits = new undum.SimpleSituation(vorple.html.tag("h3", "Credits:") + 
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Programmer\t") + vorple.html.tag("emph", "Ali Sajid Imami"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Writer\t") + vorple.html.tag("emph", "Shumaila Hashmi"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Illustrator\t") + vorple.html.tag("emph", "Sana Ahmad"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Project Coordinator\t") + vorple.html.tag("emph", "Urooj Shuja'at Ali Janjua"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Outreach Coordinator\t") + vorple.html.tag("emph", "Awais Ali"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Content Review and Editing\t") + vorple.html.tag("emph", "Nyda Ahmad"))) +
+vorple.html.p( vorple.html.tag("center", "Thank you all for playing this adventure." ))
+);
 
 
 // ---------------------------------------------------------------------------
@@ -203,4 +220,5 @@ undum.game.qualityGroups = {
  * to configure the character at the start of play. */
 undum.game.init = function(character, system) {
     vorple.core.init( system );
+    system.setCharacterText(vorple.html.p("You don't know who you are"));
 };
