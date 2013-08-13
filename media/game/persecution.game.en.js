@@ -19,6 +19,7 @@ undum.game.version = "0.2";
 
 undum.game.situations.start = new undum.Situation({
     enter: function( character, system, from ) {
+        system.write(vorple.html.tag("center", vorple.media.image('title-small.jpg')));
         system.write( vorple.html.tag("h3", vorple.html.link( "start2", vorple.html.tag("center","Welcome to the celestial farce that is life."))));
     }    
 });
@@ -39,14 +40,14 @@ undum.game.situations.start4 = new undum.Situation({
     enter: function( character, system, from ) {
         system.write( vorple.html.p("You have had the misfortune to be born here. You were born here under circumstance that made you susceptible to your current situation. You see, you are dead now. And it's really your fault. Yes. Really. You were born in the wrong family. You had the wrong name. You had the wrong upbringing and thus you adeserved what happened to you. Your mind wanders off, trying to remember stuff that happened in another life time. It's hard. You can barely make out your own name.") +
                 vorple.html.tag("ul",
-                                vorple.html.tag("li", vorple.html.link("ahmedi2", "Muhammad Ahmed")) +
+                                vorple.html.tag("li", vorple.html.link("ahmedi1", "Muhammad Ahmed")) +
                                 vorple.html.tag("li", vorple.html.link("shiaplaceholder", "Syed Ali Zaidi")) +
                                 vorple.html.tag("li",vorple.html.link("christianplaceholder", "Sarah Masih")) +
                                 vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Placeholder")),
                                 {classes: "options"}));
     },
     exit: function(character, system, to) {
-        if (to == 'ahmedi2') {
+        if (to == 'ahmedi1') {
                         system.setCharacterText(
                             vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
                         );
@@ -56,7 +57,8 @@ undum.game.situations.start4 = new undum.Situation({
 
 // Ahmedi Storyline
 
-undum.game.situations.ahmedi1 = new undum.SimpleSituation( vorple.html.p("You turn off the News and sit in the darkened room.  Your parents in the other room are asleep, but the news report has driven all idea of sleep from your mind.") + vorple.html.p( vorple.html.link( "ahmedi2", "You decide to turn in." )));
+undum.game.situations.ahmedi1 = new undum.SimpleSituation(vorple.html.p("You turn off the News and sit in the darkened room.  Your parents in the other room are asleep, but the news report has driven all idea of sleep from your mind.") + vorple.html.p( vorple.html.link( "ahmedi2", "You decide to turn in." ))
+    );
 
 undum.game.situations.ahmedi2 = new undum.SimpleSituation( 
 vorple.html.p("You couldn't really sleep...") + 
@@ -223,4 +225,5 @@ undum.game.qualityGroups = {
 undum.game.init = function(character, system) {
     vorple.core.init( system );
     system.setCharacterText(vorple.html.p("You don't know who you are"));
+    vorple.media.preloadImage([ 'title-small.jpg']);
 };
