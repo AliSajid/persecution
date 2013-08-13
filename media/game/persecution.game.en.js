@@ -46,10 +46,12 @@ undum.game.situations.start4 = new undum.Situation({
                                 {classes: "options"}));
     },
     exit: function(character, system, to) {
-                system.setCharacterText(
-                    vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
-                );
-            }
+        if (to == 'ahmedi2') {
+                        system.setCharacterText(
+                            vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
+                        );
+                    }
+                }
 });
 
 // Ahmedi Storyline
@@ -182,7 +184,7 @@ undum.game.situations.shia7 = new undum.SimpleSituation( "<p>Hello world!</p>" )
 
 undum.game.situations.epilogue1 = new undum.SimpleSituation(vorple.html.p("This death really isn't the death of a person. It is the death of the whole nation. When violence and hatred becom our partners, nothing can save us from the ultimate destuction. It will chip away a us, until every majority will suffer the fate of these minorities." + vorple.html.p(vorple.html.link("epilogue2", "We must save the people, to ensure our survival"))));
 
-undum.game.situations.epilogue2 = new undum.SimpleSituation(vorple.html.tag("h2", vorple.html.tag("strong", vorple.html.link("credits", "The End"))));
+undum.game.situations.epilogue2 = new undum.SimpleSituation(vorple.html.tag ( "center", vorple.html.tag("h2", vorple.html.tag("strong", vorple.html.link("credits", "The End")))));
 
 undum.game.situations.credits = new undum.SimpleSituation(vorple.html.tag("h3", "Credits:") + 
 vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Programmer\t") + vorple.html.tag("emph", "Ali Sajid Imami"))) +
