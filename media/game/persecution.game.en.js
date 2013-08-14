@@ -41,24 +41,39 @@ undum.game.situations.start4 = new undum.Situation({
         system.write( vorple.html.p("You have had the misfortune to be born here. You were born here under circumstance that made you susceptible to your current situation. You see, you are dead now. And it's really your fault. Yes. Really. You were born in the wrong family. You had the wrong name. You had the wrong upbringing and, thus, you deserved what happened to you. Your mind wanders off, trying to remember stuff that happened in another life time. It's hard. You can barely make out your own name.") +
                 vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("ahmedi1", "Muhammad Ahmed")) +
-                                vorple.html.tag("li", vorple.html.link("shiaplaceholder", "Syed Ali Zaidi")) +
+                                vorple.html.tag("li", vorple.html.link("shia1", "Syed Ali Zaidi")) +
                                 vorple.html.tag("li",vorple.html.link("christianplaceholder", "Sarah Masih")) +
                                 vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Placeholder")),
                                 {classes: "options"}));
     },
     exit: function(character, system, to) {
-        if (to == 'ahmedi1') {
+        switch(to)
+        {
+            case 'ahmedi1':
+            system.setCharacterText(vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution.")));
+            break;
+            case 'shia1':
+            system.setCharacterText(vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl"));
+            break;
+            default:
+            system.setCharacterText(vorple.html.p("You will have to wait for the other people to appear."));
+        }
+/*        if (to == 'ahmedi1') {
                         system.setCharacterText(
                             vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
                         );
                     }
+                else if (to == 'shia1') {
+                            system.setCharacterText(
+                            vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl")
+                };
                 else
                 {
                     system.setCharacterText(
                             vorple.html.p("You will have to wait for the other people to appear."));
-                }
-                }
-});
+                }*/
+                
+}});
 
 // Ahmedi Storyline
 
@@ -172,15 +187,56 @@ undum.game.situations.christian7 = new undum.SimpleSituation( "<p>Hello world!</
 // Shia Storyline
 undum.game.situations.shiaplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 2")));
 
-undum.game.situations.shia1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.shia1 = new undum.SimpleSituation(vorple.html.p("As the jingle signifying the end of the news report plays, you turn off the radio. Your eyes are heavy but you promise yourself a hot cup of tea and a long sleep just as soon as you reach home. There were the usual cases in the ER last night: road traffic casualties, a businessman with a heart attack, and a suicide attempt. All patched up and fairly stable by the time you signed off in the morning.") +
+vorple.html.p("The news, though, now that was troubling. A part of your mind was focused on the report, worrying, turning it over again and again, thinking about the consequences and the implications. Conditions were terrible in Pakistan these days. It was best to just get out of the country alive while one still could. But you knew that wasn’t an option for you.") +
+vorple.html.p("It wasn’t that a doctor of your standing couldn't find a position abroad; it was simply a deep streak of patriotism and a sense of obstinacy that kept you sticking here. And your mother of course. Adjusting to new ways would be difficult for her. Speaking of which, you had to pick her up today.") +
+vorple.html.p(vorple.html.link("shia2", "You take the turning back to the school near your house and wait for your mother as the bell inside rings and the children come flooding out. ")));
 
-undum.game.situations.shia2 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.shia2 = new undum.SimpleSituation(vorple.html.p(vorple.html.quote("Assalam-alaikum Beta") + ", she said affectionately, as she sat down in the car. " + vorple.html.quote("You seem really tired today.")) +
+vorple.html.p(vorple.html.quote("Walaikum Salam Maa") + ", you reply. She was partly correct. You were tired, but you were also worried. However, it made no sense to worry her too." ) +
+vorple.html.quote("You were the only child of your mother, who was widowed while you were still eight years old. For the past twenty years, she had spent her days teaching at a local school in the mornings and at a tuition institute in the evenings to ensure that you got a good education.") +
+vorple.html.quote("It was not an easy job. She had to navigate the treacherous waters of the society with constant vigilance, lest people point fingers at her. Her struggle bore fruit, and you became a doctor, like she had always dreamed. She still taught, though, out of love for the job and a desire to stay active. And she still fussed over you as she did when you were a child. You were the centre of all her hopes and dreams and efforts then, as you are now. ") +
+vorple.html.p(vorple.html.link("shia3", "You start the car.")));
 
-undum.game.situations.shia3 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.shia3 = new undum.SimpleSituation(vorple.html.p("The next day you arrive at the hospital to find a note from the supervisor. You had been called to his office. While you are waiting outside, you see your fellow resident, a young man who boasted more of resources than skills at doctoring, leave the room with an unctuous smile on his face. ") +
+vorple.html.p("As you enter the office, the supervisor is hastily shoving an envelope into a drawer of his desk and closing it. You wait until he straightens up. He seems redder in the face than usual, and his demeanour, never very encouraging or open to begin with, seems colder. ") +
+vorple.html.p("He shuffles around papers on his desk, ignoring you long enough to make you uncomfortable. When you clear your throat, he looks up at you abruptly. ") +
+vorple.html.quote("Dr Zaidi, we have decided not to take you on for the post graduate registrar position this year. Based on your performance, we feel it would be best if you continued a year more as a senior house officer. When you have enough experience you may be promoted to the post.") +
+vorple.html.p("You feel your heart sink, and anger rise up. You debate asking him who HAD gotten the position.") +
+vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("./ask", "Ask who got the position?")) +
+                                vorple.html.tag("li",vorple.html.link("./dontask", "Don't ask that question.")),
+                                {classes: "transient options"}),
 
-undum.game.situations.shia4 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
-undum.game.situations.shia5 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+{
+        actions: {
+            ask: vorple.html.quote("The position has been given to Dr. Umar. He is a fine young gentleman who has shown persuasively excellent performance throughout.") + vorple.html.p("No wonder the fellow resident looked so smarmy. He must have pulled some strings, or pulled out his wallet anyhow. You feel the anger turning to rage, and exit the room before you end up making a scene.")  + vorple.html.p("Back in the ward, you contemplate reporting this to the MS.") + 
+            vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("./protest", "Write a letter to the MS, informing him of the Bias.")) +
+                                vorple.html.tag("li", vorple.html.link("./dontprotest", "Do Nothing.")),
+                                {classes: "transient options"}),
+            dontask: vorple.html.p("You feel the anger turning to rage, and exit the room before you end up making a scene.") + vorple.html.p("Back in the ward, you contemplate reporting this to the MS.") + vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("./protest", "Write a letter to the MS, informing him of the Bias.")) +
+                                vorple.html.tag("li",vorple.html.link("./dontprotest", "Do Nothing.")),
+                                {classes: "transient options"}),
+            protest: vorple.html.p("You decide to write a letter to the MS explaining the bias in the selection. A few weeks later, you recieve a censure for wasting the time of the management.") + vorple.html.p(vorple.html.link("shia4", "Nothing happens of course. As expected")),
+            dontprotest: vorple.html.p(vorple.html.link("shia4", "You decide to let it go. This isn't the first time this has happened, and apparently, it won't be the last."))
+                 }
+});
+
+undum.game.situations.shia4 = new undum.SimpleSituation(vorple.html.tag("h3","One week later. ") + 
+vorple.html.p("It is evening, and you have just woken up from confused dreams. Your mother is standing over you, shaking you awake gently. ") +
+vorple.html.quote("Beta, there is news of a blast in the city’s main Imam Baargah. The victims will be arriving at your hospital any time soon. You ought to be there.") +
+vorple.html.p("You feel energy suffuse into your limbs; clearing away the sleepiness, you get up and get dressed hurriedly, hugging your mother on the way out. You knew it broke her heart to disturb your rest, but she is aware how much it means to you to help people, and after a blast the hospital needed as many hands as it could get." + vorple.html.link( "shia5" ," You leave quickly. ")));
+
+undum.game.situations.shia5 = new undum.SimpleSituation(vorple.html.tag("h3","One month later ") +
+vorple.html.p("You are heading back from your evening duty one night. You have only just noticed a van that seems to be tailing you and have begun to feel suspicious when it swerves to the side and in front of you, forcing you to stop. Four men step out. ") +
+vorple.html.p("They come close to your car. One of them, wearing a black cloth over the lower half of his face, taps the window of your car with his gun. Open up, he signs. Terrified, you do so. He pulls you out of the car roughly into the ditch at the side of the road. ") +
+vorple.html.p("Two of the men push you onto your knees. They shout at you to put your hands behind your head. You beg them to take anything, the car, the mobile phone, the measly amount of money in your wallet. One of them rifles your pockets, but they are not looking for money. They check your ID card.") +
+vorple.html.quote("You are Dr. Ali Zaidi? Shi’a?") +
+vorple.html.p("As you hear the sound of the gun being cocked, you realize what they were really after. You go cold. The last noise you hear is the bullet exploding from the barrel, the last thought you have is of your mother, waiting late into the night, while the lovingly cooked food grows cold on the dinner table.") +
+vorple.html.p(vorple.html.link("epilogue1", "Dr. Zaidi is gone. What's left is just another statistic.")));
 
 undum.game.situations.shia6 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
