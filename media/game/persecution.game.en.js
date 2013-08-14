@@ -93,7 +93,7 @@ undum.game.situations.ahmedi4 = new undum.SimpleSituation(
 vorple.html.tag('h2', vorple.html.tag( 'strong', "Two months later" )) + 
 vorple.html.p("You're at a medical store. The doctor who prescribed the medicine for you has recommended this store as the most likely to carry the medicine you need, which is a fairly expensive imported cream. Your now-fiancée, Kashifa, is waiting in the car outside, and you are full of food and the satisfaction of an evening spent with a beautiful woman.") + 
 vorple.html.p("The man serving you at the counter has a beard the size of a bush and an ingratiating smile. He sees your prescription and hurries off to get the medication.") +
-vorple.html.p("When he returns, he glances at your name, written at the top of your prescription, and pauses. His whole demeanour, which was helpful and friendly up until now, changes.") +
+vorple.html.p("As he is handing you your medication, he sees your ring and pauses. He stares at the Quranic verse etched onto the ring. His whole demeanour, which was helpful and friendly up until now, changes.") +
 vorple.html.p(vorple.html.quote("Tum Qadiani ho?") + "(Are you Qadiani?)") +
 vorple.html.p("You are stuck in a very difficult position..") + 
                         vorple.html.tag("ul",
@@ -107,7 +107,7 @@ vorple.html.p("You are stuck in a very difficult position..") +
                                 vorple.html.tag("li", vorple.html.link("./retaliate", "You decide to fight back.")) +
                                 vorple.html.tag("li",vorple.html.link("./noretaliate", "You decide to head back. You don't want any more trouble.")),
                                 {classes: "options transient"}))),
-            deny1: vorple.html.p("You deny the allegtion. The shopkeeper points at your name. " + vorple.html.quote("Your name. You are clearly Qadiani. Admit it.")) +
+            deny1: vorple.html.p("You deny the allegtion. The shopkeeper points at your ring. " + vorple.html.quote("Your ring. You are clearly Qadiani. Admit it.")) +
                                 vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("./accept", "You nod, hurt.")) +
                                 vorple.html.tag("li",vorple.html.link("./deny2", "You keep denying...")),
@@ -118,7 +118,7 @@ vorple.html.p("You are stuck in a very difficult position..") +
                 }
 });
 
-undum.game.situations.ahmedi5 = new undum.SimpleSituation( vorple.html.p("There is news about an Ahmadi mosque being ransacked, the Imam arrested and the congregation beaten.  It was the mosque in your neighbourhood, and if you hadn't decided to work late that day you would have been part of the congregation.  You are scared now, especially since more and more people were turning a cold shoulder to you at work, and there were rumours of a complaint going around about you. Even your fiance is distant these days, part out of fear and part out of ") +
+undum.game.situations.ahmedi5 = new undum.SimpleSituation( vorple.html.p("There is news about an Ahmadi mosque being ransacked, the Imam arrested and the congregation beaten.  It was the mosque in your neighbourhood, and if you hadn't decided to work late that day you would have been part of the congregation.  You are scared now, especially since more and more people were turning a cold shoulder to you at work, and there were rumours of a complaint going around about you. Even your fiance is distant these days, part out of fear and part out of distaste...") +
 vorple.html.p(vorple.html.link("ahmedi6", "Things seem to have gone from bad to worse." )));
 
 undum.game.situations.ahmedi6 = new undum.SimpleSituation(vorple.html.tag("h3", "A few weeks later") +
