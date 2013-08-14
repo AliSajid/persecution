@@ -38,7 +38,7 @@ undum.game.situations.start3 = new undum.Situation({
 
 undum.game.situations.start4 = new undum.Situation({
     enter: function( character, system, from ) {
-        system.write( vorple.html.p("You have had the misfortune to be born here. You were born here under circumstance that made you susceptible to your current situation. You see, you are dead now. And it's really your fault. Yes. Really. You were born in the wrong family. You had the wrong name. You had the wrong upbringing and thus you adeserved what happened to you. Your mind wanders off, trying to remember stuff that happened in another life time. It's hard. You can barely make out your own name.") +
+        system.write( vorple.html.p("You have had the misfortune to be born here. You were born here under circumstance that made you susceptible to your current situation. You see, you are dead now. And it's really your fault. Yes. Really. You were born in the wrong family. You had the wrong name. You had the wrong upbringing and, thus, you deserved what happened to you. Your mind wanders off, trying to remember stuff that happened in another life time. It's hard. You can barely make out your own name.") +
                 vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("ahmedi1", "Muhammad Ahmed")) +
                                 vorple.html.tag("li", vorple.html.link("shiaplaceholder", "Syed Ali Zaidi")) +
@@ -66,15 +66,15 @@ undum.game.situations.ahmedi1 = new undum.SimpleSituation(vorple.html.p("You tur
     );
 
 undum.game.situations.ahmedi2 = new undum.SimpleSituation( 
-vorple.html.p("You couldn't really sleep...") + 
-vorple.html.p("Tomorrow was a big day.  Your first lecture of the semester.  It was a new class, a fresh beginning, and it was going to feel good, being on stage.  Five years of grudging university work, getting through that PhD, facing the panel and defending your thesis, and then finally the decision to return to Pakistan and help your country.") + 
+vorple.html.p("You can't really sleep...") + 
+vorple.html.p("Tomorrow was a big day.  Your first lecture of the semester.  It was a new class, a fresh beginning, and it was going to feel good, being on stage.  Five years of grudging university work, getting through that PhD, facing the panel and defending your thesis,  and then, finally, the decision to return to Pakistan, and help your country.") + 
 vorple.html.p("Your parents had been overjoyed, but also worried. And after the news today, you understood that feeling. How long before the very students and university you joined figured out your religious affiliations? How long before that became a problem?") + 
-vorple.html.p("It was impossible to tell. And yet you were still excited, buoyed up by the enthusiasm of youth, the belief that it couldn't really happen to you.") + 
+vorple.html.p("It was impossible to tell. And yet you were still excited, buoyed by the enthusiasm of youth, the belief that it couldn't really happen to you.") + 
 vorple.html.p(vorple.html.link("ahmedi3", "And with that thought, you get up and head to bed.")));
 
 undum.game.situations.ahmedi3 = new undum.SimpleSituation(
 vorple.html.tag('h2', vorple.html.tag( 'strong', "Six months later" )) + 
-vorple.html.p("It is the sixth month since you returned and you are getting ready for work.  Things have gotten along pretty smoothly, and the fears you had on that night several months back all but faded from your mind. Your collegues are nice if distant, and the students fresh and teaching them challenging.") + 
+vorple.html.p("It is the sixth month since you returned and you are getting ready for work.  Things have gotten along pretty smoothly, and the fears you had that night several months back all but faded from your mind.  Your colleagues are nice, if distant, the students, fresh, and teaching them, challenging.") + 
 vorple.html.p("Your phone beeps.") + 
 vorple.html.p("It is a text from your old friend Kashifa, who is also studying for a PhD in a different department in the same university. She is a couple years younger than you and you bumped into her a week back and exchanged numbers." ) +
 vorple.html.p("The text stares at you, waiting for a reply...") +
@@ -91,10 +91,10 @@ vorple.html.p("The text stares at you, waiting for a reply...") +
 
 undum.game.situations.ahmedi4 = new undum.SimpleSituation(
 vorple.html.tag('h2', vorple.html.tag( 'strong', "Two months later" )) + 
-vorple.html.p("You're at a medical store. The doctor who prescribed the medicine for you has recommended this store as the most likely to carry the medicine you need, which is a fairly expensive imported cream. Your now-fiance Kashifa is waiting in the car outside, and you are full of food and the satisfaction of an evening spent with a beautiful woman.") + 
-vorple.html.p("The man serving you at the counter is has a beard the size of a bush and an ingratiating smile. He sees your prescription and hurries off to get the medication.") +
-vorple.html.p("When he returns, he glances at your name, written at the top of your prescription, and pauses. His whole demeanour, which was helpful and friendly uptil now, changes.") +
-vorple.html.p(vorple.html.quote("Tum Qadiani ho?") + "(You are Ahmadi?)") +
+vorple.html.p("You're at a medical store. The doctor who prescribed the medicine for you has recommended this store as the most likely to carry the medicine you need, which is a fairly expensive imported cream. Your now-fiancée, Kashifa, is waiting in the car outside, and you are full of food and the satisfaction of an evening spent with a beautiful woman.") + 
+vorple.html.p("The man serving you at the counter has a beard the size of a bush and an ingratiating smile. He sees your prescription and hurries off to get the medication.") +
+vorple.html.p("When he returns, he glances at your name, written at the top of your prescription, and pauses. His whole demeanour, which was helpful and friendly up until now, changes.") +
+vorple.html.p(vorple.html.quote("Tum Qadiani ho?") + "(Are you Qadiani?)") +
 vorple.html.p("You are stuck in a very difficult position..") + 
                         vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("./accept", "You nod.")) +
@@ -197,9 +197,9 @@ undum.game.situations.credits = new undum.SimpleSituation(vorple.html.tag("h3", 
 vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Programmer\t") + vorple.html.tag("emph", "Ali Sajid Imami"))) +
 vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Writer\t") + vorple.html.tag("emph", "Shumaila Hashmi"))) +
 vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Illustrator\t") + vorple.html.tag("emph", "Sana Ahmad"))) +
-vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Project Coordinator\t") + vorple.html.tag("emph", "Urooj Shuja'at Ali Janjua"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Project Coordinator and Editing\t") + vorple.html.tag("emph", "Urooj Shuja'at Ali Janjua"))) +
 vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Outreach Coordinator\t") + vorple.html.tag("emph", "Awais Ali"))) +
-vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Content Review and Editing\t") + vorple.html.tag("emph", "Nyda Ahmad"))) +
+vorple.html.p( vorple.html.tag("center", vorple.html.tag("strong", "Content Review\t") + vorple.html.tag("emph", "Nyda Ahmad"))) +
 vorple.html.p( vorple.html.tag("center", "Thank you all for playing this adventure." ))
 );
 
