@@ -52,6 +52,11 @@ undum.game.situations.start4 = new undum.Situation({
                             vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
                         );
                     }
+                else
+                {
+                    system.setCharacterText(
+                            vorple.html.p("You will have to wait for the other people to appear."));
+                }
                 }
 });
 
@@ -130,7 +135,7 @@ vorple.html.p(vorple.html.link("epilogue1", "In a fog of depression, you decide 
 undum.game.situations.ahmedi7 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
 // Hindu Storyline
-undum.game.situations.hinduplaceholder = new undum.SimpleSituation( vorple.html.p("Coming soon, in Episode 4"));
+undum.game.situations.hinduplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 4")));
 
 undum.game.situations.hindu1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
@@ -148,7 +153,7 @@ undum.game.situations.hindu7 = new undum.SimpleSituation( "<p>Hello world!</p>" 
 
 
 // Christian Storyline
-undum.game.situations.christianplaceholder = new undum.SimpleSituation( vorple.html.p("Coming soon, in Episode 3"));
+undum.game.situations.christianplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 3")));
 
 undum.game.situations.christian1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
@@ -165,7 +170,7 @@ undum.game.situations.christian6 = new undum.SimpleSituation( "<p>Hello world!</
 undum.game.situations.christian7 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
 // Shia Storyline
-undum.game.situations.shiaplaceholder = new undum.SimpleSituation( vorple.html.p("Coming soon, in Episode 2"));
+undum.game.situations.shiaplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 2")));
 
 undum.game.situations.shia1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
