@@ -43,7 +43,7 @@ undum.game.situations.start4 = new undum.Situation({
                                 vorple.html.tag("li", vorple.html.link("ahmedi1", "Muhammad Ahmed")) +
                                 vorple.html.tag("li", vorple.html.link("shia1", "Syed Ali Zaidi")) +
                                 vorple.html.tag("li",vorple.html.link("christian1", "Sarah Masih")) +
-                                vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Placeholder")),
+                                vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Avinash Khatri")),
                                 {classes: "options"}));
     },
     exit: function(character, system, to) {
