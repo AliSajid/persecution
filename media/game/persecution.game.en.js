@@ -42,7 +42,7 @@ undum.game.situations.start4 = new undum.Situation({
                 vorple.html.tag("ul",
                                 vorple.html.tag("li", vorple.html.link("ahmedi1", "Muhammad Ahmed")) +
                                 vorple.html.tag("li", vorple.html.link("shia1", "Syed Ali Zaidi")) +
-                                vorple.html.tag("li",vorple.html.link("christianplaceholder", "Sarah Masih")) +
+                                vorple.html.tag("li",vorple.html.link("christian1", "Sarah Masih")) +
                                 vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Placeholder")),
                                 {classes: "options"}));
     },
@@ -55,23 +55,18 @@ undum.game.situations.start4 = new undum.Situation({
             case 'shia1':
             system.setCharacterText(vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl"));
             break;
+            case 'christian1':
+            system.setCharacterText(vorple.html.p("You are a christian, one of the " + vorple.html.quote("people of the book") + " who are forced to do jobs that the Good Clean People of Pakistan would rather not."));
+            break;
+            /*
+            case 'hindu1':
+            system.setCharacterText(vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl"));
+            break;
+            */
             default:
             system.setCharacterText(vorple.html.p("You will have to wait for the other people to appear."));
         }
-/*        if (to == 'ahmedi1') {
-                        system.setCharacterText(
-                            vorple.html.p("You are an Ahmedi, aka Qadiani, the " + vorple.html.quote("Kafirs by constitution."))
-                        );
-                    }
-                else if (to == 'shia1') {
-                            system.setCharacterText(
-                            vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl")
-                };
-                else
-                {
-                    system.setCharacterText(
-                            vorple.html.p("You will have to wait for the other people to appear."));
-                }*/
+
                 
 }});
 
@@ -170,15 +165,51 @@ undum.game.situations.hindu7 = new undum.SimpleSituation( "<p>Hello world!</p>" 
 // Christian Storyline
 undum.game.situations.christianplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 3")));
 
-undum.game.situations.christian1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.christian1 = new undum.SimpleSituation(vorple.html.p("You wake up in a tiny room. Out of the window you can see the first rays of the dawning sun creeping over the rim of the horizon, peeping between the irregularly built houses of your colony, touching the rooftops with orange fingers, and swiftly melding into golden yellow. In the room, your two sisters are still sleeping, and you have learnt over the past year how to get ready so as not to disturb them. ") +
+vorple.html.p("You wash your face, brush your hair quickly, don your white uniform, and pick up your books.") +
+vorple.html.p("It is a new day in a new ward, and you are excited for the classes and the chance to learn. Of course the matron in this ward is supposed to be pretty strict, but you are, on the whole, hardworking and brilliant, not to mention determined to get past tough exteriors to impress the hearts within. ") +
+vorple.html.p(vorple.html.link("christian2", "Continue...")));
 
-undum.game.situations.christian2 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.christian2 = new undum.SimpleSituation(vorple.html.p("On the way out, you quickly look into see your paralyzed father, check his sores, and give him a turn in the bed and a quick kiss before leaving. Your mother, tired from working at the factory all day and well into the night, is sleeping peacefully. ") +
+vorple.html.p("Rashid, your cousin, is waiting outside on his bike, right on time as usual. Your heart leaps as you see him, and you skip down the rough steps, pulling the door closed behind you. ") +
+vorple.html.p("Sitting sidesaddle, clutching onto Rashid, the wind from the rushing cycle always makes you feel like a bird in flight. It is a new and beautiful day.") +
+vorple.html.p(vorple.html.link("christian3", "Continue...")));
 
-undum.game.situations.christian3 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.christian3 = new undum.SimpleSituation(vorple.html.p("The Matron has already shown you how to place an IV line, and when you perfectly place the line in an old man's crinkly hand, even her stern face cracks into a smile. She tells you to properly dispose of the medical waste and briskly walks off.") +
+vorple.html.p("The patient is a decrepit old man, who was lying peacefully and quietly while the matron was there. As soon as she rounds the bend, however, he reaches out to grab your hand.") +
+vorple.html.p("What do you do?", {classes: 'transient'}) +
+vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("./shout", "You Shout!")) +
+                                vorple.html.tag("li",vorple.html.link("./dontshout", "You freeze, too surprised to react")),
+                                {classes: "transient options"}),
+{
+        actions: {
+            shout: vorple.html.quote("You shout and pull away. As you look back, you see his hands beneath his sheet, obviously masturbating. You run out of the ward.") + 
+            vorple.html.p("There is no one in this part of the ward that has witnessed this act.") +
+            vorple.html.p("You feel violated. What do you do now?", {classes: 'transient'}) +
+            vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("./complain", "Complain to the Matron")) +
+                                vorple.html.tag("li", vorple.html.link("./dontcomplain", "Do Nothing")),
+                                {classes: "transient options"}),
+            dontshout: vorple.html.p("You freeze. Too surprised to react.") + vorple.html.p("He grins at you with a leer, and reaches out with his other hand and quickly gives your breast a squeeze. Horrified you pull back and run off. As you look back, you see his hands beneath his sheet, obviously masturbating. ") + 
+            vorple.html.p("There is no one in this part of the ward that has witnessed this act.") +
+            vorple.html.p("You feel violated. What do you do now?", {classes: 'transient'}) +
+            vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("./complain", "Complain to the Matron")) +
+                                vorple.html.tag("li",vorple.html.link("./dontcomplain", "Pretend that nothing happened.")),
+                                {classes: "transient options"}),
+            complain: vorple.html.p("You decide to decide to complain to the Matron. The Matron calls you a liar, saying that the patient is a ver respectable person in the community.") + vorple.html.p(vorple.html.link("christian4", "You get sent home for the day for being \"hysteric\".")),
+            dontcomplain: vorple.html.p(vorple.html.link("christian4", "You decide to let it go. This doesn't really seem like the thing anyone would believe and you would probably get ridiculed. Plus, the honor of your family is at stake."))
+                 }
+});
 
-undum.game.situations.christian4 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.christian4 = new undum.SimpleSituation(vorple.html.p("You go home that night to find out Rashid has been arrested by local police. He had gotten into a fight with his foreman at the factory and the man had accused him of blasphemy. Your heart sinks. Conditions are bad already and you go to sleep scared and worried.") + 
+    vorple.html.p(vorple.html.link("christian5", "You sleep fitfully, nightmares keeping you trapped but restless."))
+);
 
-undum.game.situations.christian5 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.christian5 = new undum.SimpleSituation(vorple.html.p("You wake up in the night to the sounds of screams and the smell of fire and smoke. There is a fire somewhere nearby. Your sisters wake up and are screaming, your parents are outside and there is noise and darkness and orange stifling smoke everywhere. You realise that the fire has caught from the lower floors and there is no way out but the window. You quickly pass down your sisters from the window, making them jump into the arms of bystanders below, hoping your parents and your brothers got out safely. ") +
+vorple.html.p("You turn back to get your books, not wanting to leave them to be burnt, when the smoke overcomes you and the world turns black. You faint and know no more.") +
+vorple.html.p(vorple.html.link("epilogue1", "Sarah Masih is gone. What's left is just another statistic.")));
 
 undum.game.situations.christian6 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
