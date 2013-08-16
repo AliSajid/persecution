@@ -251,6 +251,7 @@ undum.game.situations.christian4 = new undum.SimpleSituation(vorple.html.p("You 
 
 undum.game.situations.christian5 = new undum.SimpleSituation(vorple.html.p("You wake up in the night to the sounds of screams and the smell of fire and smoke. There is a fire somewhere nearby. Your sisters wake up and are screaming, your parents are outside and there is noise and darkness and orange stifling smoke everywhere. You realise that the fire has caught from the lower floors and there is no way out but the window. You quickly pass down your sisters from the window, making them jump into the arms of bystanders below, hoping your parents and your brothers got out safely. ") +
 vorple.html.p("You turn back to get your books, not wanting to leave them to be burnt, when the smoke overcomes you and the world turns black. You faint and know no more.") +
+vorple.html.tag("center", vorple.media.image('burnt-girl-small.jpg')) +
 vorple.html.p(vorple.html.link("epilogue1", "Sarah Masih is gone. What's left is just another statistic.")));
 
 undum.game.situations.christian6 = new undum.SimpleSituation( "<p>Hello world!</p>" );
@@ -359,5 +360,5 @@ undum.game.qualityGroups = {
 undum.game.init = function(character, system) {
     vorple.core.init( system );
     system.setCharacterText(vorple.html.p("You don't know who you are"));
-    vorple.media.preloadImage([ 'title-small.jpg']);
+    vorple.media.preloadImage([ 'title-small.jpg', 'burnt-girl-small']);
 };
