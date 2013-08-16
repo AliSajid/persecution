@@ -56,10 +56,10 @@ undum.game.situations.start4 = new undum.Situation({
             system.setCharacterText(vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl"));
             break;
             case 'christian1':
-            system.setCharacterText(vorple.html.p("You are a christian, one of the " + vorple.html.quote("people of the book") + " who are forced to do jobs that the Good Clean People of Pakistan would rather not."));
+            system.setCharacterText(vorple.html.p("You are a Christian, one of the " + vorple.html.quote("people of the book") + " who are forced to do jobs that the Good Clean People of Pakistan would rather not."));
             break;
             case 'hindu1':
-            system.setCharacterText(vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl"));
+            system.setCharacterText(vorple.html.p("You are a Hindu, an Enemy of the state just by your mere existence."));
             break;
             default:
             system.setCharacterText(vorple.html.p("You will have to wait for the other people to appear."));
