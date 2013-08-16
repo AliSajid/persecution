@@ -43,7 +43,7 @@ undum.game.situations.start4 = new undum.Situation({
                                 vorple.html.tag("li", vorple.html.link("ahmedi1", "Muhammad Ahmed")) +
                                 vorple.html.tag("li", vorple.html.link("shia1", "Syed Ali Zaidi")) +
                                 vorple.html.tag("li",vorple.html.link("christian1", "Sarah Masih")) +
-                                vorple.html.tag("li",vorple.html.link("hinduplaceholder", "Avinash Khatri")),
+                                vorple.html.tag("li",vorple.html.link("hindu1", "Avinash Khatri")),
                                 {classes: "options"}));
     },
     exit: function(character, system, to) {
@@ -58,11 +58,9 @@ undum.game.situations.start4 = new undum.Situation({
             case 'christian1':
             system.setCharacterText(vorple.html.p("You are a christian, one of the " + vorple.html.quote("people of the book") + " who are forced to do jobs that the Good Clean People of Pakistan would rather not."));
             break;
-            /*
             case 'hindu1':
             system.setCharacterText(vorple.html.p("You are, as per the slogan, a Kafir Shi'a, and Wajib-ul-Qatl"));
             break;
-            */
             default:
             system.setCharacterText(vorple.html.p("You will have to wait for the other people to appear."));
         }
@@ -147,20 +145,63 @@ undum.game.situations.ahmedi7 = new undum.SimpleSituation( "<p>Hello world!</p>"
 // Hindu Storyline
 undum.game.situations.hinduplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 4")));
 
-undum.game.situations.hindu1 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu1 = new undum.SimpleSituation(
+    vorple.html.p("You step out of the warm water, wrapping a towel around yourself as you move out of the bathroom and into the cool of the shaded room. You get dressed quickly and absentmindedly, your mind half engaged in thoughts about the deal to go through with the PAK-SAR company in the evening.")  +
+    vorple.html.p("Adjusting your loose shalwar kameez and slipping on rubber sandals, you pad your way to the dining room, where your lovely wife has just set out the food.") +
+    vorple.html.p("In the past ten years, you have tried as much as possible to eat your meals at home. not only was the fatty cooking available outside grossly, proudly non-vegetarian, but also loaded with all sorts of chemicals and injurious to health. You had not gotten to the age of 48 with a perfectly clean arteries by indulging in That gross stuff every day.") +
+    vorple.html.p("Your wife serves you in silence, recognising your abstraction and knowing better than to bother you while your mind and mouth was full. ") +
+    vorple.html.p("As you finish your meal, you heave a sigh. You debate cancelling the early evening meetings and taking a short afternoon rest." + vorple.html.link("hindu2" ," But in the end you head off back to work anyway."))
+);
 
-undum.game.situations.hindu2 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu2 = new undum.SimpleSituation(
+    vorple.html.p("Taking your meals at home also allows you to meet your children, which you wouldn't be able to otherwise since you usually return home really late. Here they come running through the door,  your little boy Ravi, and your two daughters, Pooja and Tanya. They are both growing so fast, from the clumsy, rowdy ducklings they were but days ago, elongating like swans into beautiful elegant young women. It makes your heart rise to see them. After all, this is your family. This is who you work so hard for every day. ") +
+    vorple.html.p("You give them all a hug, a kiss and then make your way out. Your driver, a grinning young muslim man you've just hired, brings the children's bags in, then comes back out and drives you to the office.") +
+    vorple.html.link("hindu3", "You smile. Life seems good.")
+);
 
-undum.game.situations.hindu3 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu3 = new undum.SimpleSituation(
+    vorple.html.p("The head of the PAK SAR man is a balding gentleman, fidgeting and slightly sweating despite the air conditioned room. He looks as though he would like to loosen his tie, but refrains from doing so. You smile at him to try to put him at his ease, but this seems to increase his discomfort. ") +
+    vorple.html.quote("The fact of the matter is, Mr Khatri, my shareholders are unwilling for us to do this deal with you. The matter is a little sensitive. That is why I have come to you in person. The fact is, no negotiations on the matter are even allowed to be held. They simply want me to pull out.") +
+    vorple.html.p("You lean back. This comes as a blow. You were keen on getting this contract, which had been a difficult one to pull off, but which would have benefited you greatly. ")
+    vorple.html.quote("But surely there is something we can work out? Is there a problem with the services?") +
+    vorple.html.quote("No, no. You are the best company we have been contracted by. My stakeholders, ah, have a problem with your...well your religious affiliations.") +
+    vorple.html.p("You are disappointed but not surprised." + vorple.html.quote("Mr Ahmed, I have spent all my life doing this line of work. As i see it, business is business, and religious affiliations matter least when you are set to make a profit.")) +
+    vorple.html.p("Mr Ahmed looks even more upset." vorple.html.quote("I understand, Mr Khatri. I am a man of business myself. My shareholders, however, are men of principle. They will not bend. I am very sorry. There is nothing more I can do. ")) +
+    vorple.html.p("He gets up, looks about to reach over to shake your hand, then thinks better of it. He nods and walks briskly out of the office. ") +
+    vorple.html.link("hindu4", "You are left slightly worried and confused.")
+);
 
-undum.game.situations.hindu4 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu4 = new undum.SimpleSituation(
+    vorple.html.tag("h3","Next week") +
+    vorple.html.p("You are finishing off the last of your meal when Ravi bursts into the room, his small face besmirched with tears, round and red and angry. He flings himself in your lap and sobs there. ") +
+    vorple.html.p("Pooja and Tanya come into the room after him, slower and more calmly, though even they look upset. You ask them what happened, and while their mother looks on, they tell you about how students in Ravi's class had been refusing to play with him for a week. That break, they had taken to calling him all sorts of names and teasing him about being a hindu. When he got upset and lashed out at one of them, he was the one reprimanded and punished.") +
+    vorple.html.p("You find yourself shaking with fury, but your wife lays a calming hand on your shoulder. She picks up the distraught boy and murmuring soothing words, carries him into the kid's room. The girls follow, leaving you alone with your buzzing thoughts.") +
+    vorple.html.link("hindu5","You try to console him, to no avail...")
+);
 
-undum.game.situations.hindu5 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu5 = new undum.SimpleSituation(
+    vorple.html.tag("h3","A few months later...")+
+    vorple.html.p("It is while you are in your office that you get the phone call from your wife. Pooja has disappeared.  She had not arrived to school that morning and no one had any idea where she was. Your usually calm wife is completely distraught. You promise to phone everywhere she could possibly be, and to file a police report on the way home. ")+
+    vorple.html.p("An agonising week later, you get a phone call from police. They have found your daughter at the house of a local cleric. They claims she has converted 'out of free will' and married the cleric's son. You are not allowed to meet her.") +
+    vorple.html.p("You are devastated, but determined to seek help for this.") +
+    vorple.html.tag("ul",
+                                vorple.html.tag("li", vorple.html.link("hindu6", "Seek Legal Help  from the Human Rights Commision Pakistan")) +
+                                vorple.html.tag("li",vorple.html.link("hindu7", "Give up. Your life has been completely dismantled.")),
+                                {classes: "transient options"}));
 
-undum.game.situations.hindu6 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu6 = new undum.SimpleSituation(vorple.html.p("You chase lawyers all around the country, sparing no cost, but no lawyer would take your case. Their position is that the case is basicall impossible under Pakistani Law.
+Once converted to Islam, you can not convert back to your original religion.") + 
+vorple.html.p("You go to the Human Rights Commission, begging them to recover your poor daughter but they are as powerless as you. They take your case but it gets thrown out immediately. One by one, all your hopes are gone.") +
+vorple.html.link("hindu7","You break down crying one day in front of the courts..."));
 
-undum.game.situations.hindu7 = new undum.SimpleSituation( "<p>Hello world!</p>" );
+undum.game.situations.hindu7 = new undum.SimpleSituation(
+    vorple.html.p("This is the last straw for you. You close down your business, sell off your house cheaply and leave for India.  It seems wrong to subject your family to the sufferings of refugee camps but the only thought in your head is of your beautiful daughter, laughing against the light, her childhood, innocence and life all stolen from her. ") +
+    vorple.html.p("The camps are poorly equipped, overcrowded and terribly unsanitary. The rough living takes its toll on you, and within a week you are coughing with the worst cough of your life. Still you struggle on, trying to arrange matters, contact distant family, find a better place to live, a meagre job to support yourself and your family. ") +
+    vorple.html.p("Your body refuses to continue the struggle. You feel it growing weaker, the cough and the fever setting fire to your blood. The strength ebbs from your body.  You cannot struggle any longer...") +
+    vorple.html.p("Avinash Khatri is no more. What's left is just another statistic.")
+);
 
+undum.game.situations.hindu8 = new undum.SimpleSituation( "<p>Hello world!</p>" );
 
 // Christian Storyline
 undum.game.situations.christianplaceholder = new undum.SimpleSituation( vorple.html.p(vorple.html.link("credits","Coming soon, in Episode 3")));
